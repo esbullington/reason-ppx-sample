@@ -1,0 +1,6 @@
+;; dune
+(data_only_dirs sample_project)
+(executable
+  (name main)
+  (libraries ppx_tools compiler-libs)
+)

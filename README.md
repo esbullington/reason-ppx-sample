@@ -17,3 +17,11 @@ yarn link "ppx-test"
 yarn build
 node src/Demo.bs.js
 ```
+
+### Tools
+
+#### dumpast
+```
+opam install ocamlfind ppx_tools`
+
+`ocamlfind ppx_tools/dumpast -e "[%addone 1 + 2]"`

@@ -1,10 +1,9 @@
 
-
-ENTRYPOINT=Main.re
 PROGRAM=ppx
 
 build:
-	ocamlc -pp "refmt --print binary" -o $(PROGRAM) -I +compiler-libs ocamlcommon.cma -impl $(ENTRYPOINT)
+	dune build main.exe
+	cp _build/default/main.exe $(PROGRAM)
 
 clean:
-	rm *.cmo *.cmi
+	rm -rf *.cmo *.cmi ppx _build
